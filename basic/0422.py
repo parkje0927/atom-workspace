@@ -73,3 +73,84 @@ while (num != 0):
     num = int(input())
 else:
     print("프로그램을 종료합니다.")
+
+# 평균 구하기
+
+# korea = [49, 80, 20, 100, 80]
+# math = [43, 60, 85, 30, 90]
+# english = [49, 82, 48, 50, 100]
+# total = [korea, math, english]
+# print(total)
+#
+# sum = 0
+# cnt = 0
+# totalSum = 0
+#
+# for i in range(0, len(total[0])):
+#     for j in range(0, len(total)):
+#         sum += total[j][i]
+#     if (cnt == 0):
+#         print("A 학생의 총점 = ", sum)
+#         print("A 학생의 평균 = ", sum // len(total))
+#     elif (cnt == 1):
+#         print("B 학생의 총점 = ", sum)
+#         print("B 학생의 평균 = ", sum // len(total))
+#     elif (cnt == 2):
+#         print("C 학생의 총점 = ", sum)
+#         print("C 학생의 평균 = ", sum // len(total))
+#     elif (cnt == 2):
+#         print("D 학생의 총점 = ", sum)
+#         print("D 학생의 평균 = ", sum // len(total))
+#     else:
+#         print("E 학생의 총점 = ", sum)
+#         print("E 학생의 평균 = ", sum // len(total))
+#     totalSum += sum
+#     sum = 0
+#     cnt += 1
+#
+# print("학생들 총 점수 = ", totalSum)
+# print("학생들 총 평균 = ", totalSum // (len(total[0]) * len(total)))
+
+kor = [49, 80, 20, 100, 80]
+math = [43, 60, 85, 30, 90]
+eng = [49, 82, 48, 50, 100]
+midterm = [kor, math, eng]
+print(midterm)
+
+studentTotalScore = [0, 0, 0, 0, 0]
+index = 0
+for subject in midterm:
+    for score in subject:
+        studentTotalScore[index] += score
+        index += 1
+    index = 0
+
+else:
+    a, b, c, d, e = studentTotalScore
+    studentTotalAverage = [a/len(midterm), b/len(midterm), c/len(midterm), d/len(midterm), e/len(midterm)]
+    print("학생들의 평균 점수는?")
+    print(studentTotalAverage)
+    print("가장 높은 평균 점수는?")
+    max = max(studentTotalAverage)
+    print(max)
+
+# max = 0
+# sum = 0
+# i = 0
+# index = 0
+#
+# for totalScore in studentTotalScore:
+#     if (totalScore > max):
+#         max = totalScore
+#         index = i
+#
+#     avg = totalScore / len(midterm)
+#     sum += avg
+#
+#     print("총점 = ", totalScore)
+#     print("평균 = ", avg)
+#     i += 1
+#
+# print("전체 평균 = ", sum / len(midterm[0]))
+# print("가장 점수가 높은 사람 = ", (index+1), "번째 사람")
+# print("가장 점수가 높은 사람의 평균 = ", studentTotalScore[index] / len(midterm))
